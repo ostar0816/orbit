@@ -1,0 +1,16 @@
+version: "3"
+services:
+  server:
+    image: node:latest
+    command: bash -c 'while true; do sleep 60; done'
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+      - ./data/server/share:/share
+
+  mongo:
+    volumes:
+      - ./data/mongo/share:/share

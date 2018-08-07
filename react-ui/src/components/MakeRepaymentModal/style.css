@@ -1,0 +1,28 @@
+.width65 {
+    width: 64% !important;
+    margin-right: 1%;
+    display: inline-block !important;
+    vertical-align: top;
+}
+
+.width35 {
+    width: 34% !important;
+    margin-left: 1%;
+    display: inline-block !important;
+    vertical-align: top;
+}
+
+.loading-spinner {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.repayment-group {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 823px) {
+	.make-repayment {
+		margin-top: -2px;
+	}
+}

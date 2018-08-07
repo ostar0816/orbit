@@ -1,0 +1,57 @@
+version: 2
+
+jobs:
+  build_and_test_frontend:
+    docker:
+      - image: circleci/node:9.11.1
+    steps:
+        - checkout
+        - run:
+            name: install frontend dependencies
+            command: cd ./react-ui && yarn
+        - run:
+            name: compile frontend
+            command: cd ./react-ui && yarn build
+        - run:
+            name: run testrpc in frontend
+            command: cd ./react-ui && yarn chain
+            background: true
+        - run: cd ./react-ui && yarn contracts:migrate
+        - run: cd ./react-ui && yarn migrations:loans
+        - run: cd ./react-ui && yarn jest --maxWorkers 2
+  deploy_staging:
+      docker:
+        - image: circleci/node:9.11.1
+      steps:
+        - checkout
+        - run:
+            name: install dependencies
+            command: yarn
+        - run:
+            name: compile
+            command: npm run build
+        - run:
+            name: install aws cli
+            command: sudo apt-get update && sudo apt-get install -y awscli
+        - run: yarn deploy:staging
+  deploy_production:
+      docker:
+        - image: circleci/node:9.11.1
+      steps:
+        - checkout
+        - run:
+            name: install dependencies
+            command: yarn
+        - run:
+            name: compile
+            command: npm run build
+        - run:
+            name: install aws cli
+            command: sudo apt-get update && sudo apt-get install -y awscli
+        - run: yarn deploy
+
+workflows:
+  version: 2
+  plex_build_process:
+    jobs:
+      - build_and_test_frontend

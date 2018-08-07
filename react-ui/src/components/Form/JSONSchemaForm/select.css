@@ -1,0 +1,47 @@
+.Select .Select-control {
+	height: 38px;
+}
+.Select .Select-placeholder,
+.Select .Select-value {
+	padding-top: 2px;
+	color: #CCCCCC;
+}
+
+@media only screen and (max-width: 823px) {
+	.Select .Select-placeholder,
+	.Select .Select-value {
+		padding-top: 1px;
+	}
+	.Select-placeholder, .Select--single > .Select-control .Select-value {
+		line-height: 29px;
+	}
+	.Select .Select-input {
+		height: 30px;
+	}
+	.Select .Select-input > input {
+		padding: 5px 0px;
+	}
+	.Select .Select-control {
+		height: 29px;
+		margin-top: 2px;
+	}
+}
+@media only screen and (max-width: 568px) {
+	.Select .Select-placeholder,
+	.Select .Select-value {
+		padding-top: 0px;
+	}
+	.Select-placeholder, .Select--single > .Select-control .Select-value {
+		line-height: 26px;
+	}
+	.Select .Select-input {
+		height: 25px;
+	}
+	.Select .Select-input > input {
+		padding: 5px 0px;
+	}
+	.Select .Select-control {
+		height: 29px;
+		margin-top: 0px;
+	}
+}

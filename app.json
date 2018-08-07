@@ -1,0 +1,21 @@
+{
+  "name": "dharma-plex",
+  "description": "An example client built on top of Dharma Protocol",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

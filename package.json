@@ -1,0 +1,35 @@
+{
+  "name": "orbit-net",
+  "version": "1.0.0",
+  "description": "A loan app built on top of Dharma Protocol",
+  "private": true,
+  "scripts": {
+    "build": "babel server -s -D -d dist",
+    "start": "node server",
+    "start-dev": "nodemon server --exec babel-node",
+    "test": "cd react-ui/ && yarn jest"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "bignumber.js": "^7.2.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.14.1",
+    "mongoose": "^5.2.1",
+    "mongoose-bignumber": "^1.1.0"
+  },
+  "keywords": [
+    "Dharma Protocol",
+    "Orbit Network"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.5"
+  }
+}

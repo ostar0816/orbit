@@ -1,0 +1,6 @@
+build
+node_modules
+server/node_modules
+logs
+__mocks__
+__test__

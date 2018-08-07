@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "orbit-net-front",
+      "script": "./server/index.js",
+      "instances": 4,
+      "exec_mode": "cluster"
+    }
+  ]
+}

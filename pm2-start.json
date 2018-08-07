@@ -1,0 +1,8 @@
+{
+  "apps": [
+    {
+      "name": "orbit-net-server",
+      "script": "./dist/index.js"      
+    }
+  ]
+}

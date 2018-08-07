@@ -1,0 +1,14 @@
+.git
+.circleci
+data
+docker
+react-ui
+node_modules
+.gitignore
+.prettierrc
+Dockerfile
+README.md
+app.json
+docker-compose*
+yarn-error.log
+start-prod.sh
